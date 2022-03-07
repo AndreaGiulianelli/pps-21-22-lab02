@@ -5,7 +5,7 @@ import org.junit.Test
 import u02.task2.Task2A.{neg, negGeneric, negMeth, parity, parityMeth}
 
 /**
- * I will test also the val, even if it's not properly correct.
+ * I will test also the vals, even if it's not properly correct.
  * Vals are more a private thing and usually are tested only the methods.
  */
 class Task2ATest {
