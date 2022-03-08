@@ -3,13 +3,13 @@ package u02
 import org.junit.Assert.assertTrue
 import org.junit.Assert.assertFalse
 import org.junit.Test
-import u02.task2.Task2B.{p1, p2, p3, p4}
+import u02.exercise.Es4.{p1, p2, p3, p4}
 
 /**
  * I will test also the vals, even if it's not properly correct.
  * Vals are more a private thing and usually are tested only the methods.
  */
-class Task2BTest {
+class Es4Test {
   @Test def testCurryingValTrue(): Unit =
     // Verbose for educational purpose
     // It can be done in single line p1(6)(8)(10)

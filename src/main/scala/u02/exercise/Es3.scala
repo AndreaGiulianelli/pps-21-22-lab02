@@ -1,10 +1,6 @@
-package u02.task2
+package u02.exercise
 
-/**
- * Used to wrap the code written in the REPL
- */
-object Task2A:
-  // a
+object Es3:
   val parity: Int => String = _ match
     case n if n % 2 == 0 => "even"
     case _ => "odd"
@@ -13,11 +9,8 @@ object Task2A:
     case n if n % 2 == 0 => "even"
     case _ => "odd"
 
-  // b
   val neg: (String => Boolean) => (String => Boolean) = f => x => !(f(x))
+
   def negMeth(f: String => Boolean): (String => Boolean) = x => !(f(x))
 
-  //c
   def negGeneric[T]: (T => Boolean) => (T => Boolean) = f => x => !(f(x))
-
-

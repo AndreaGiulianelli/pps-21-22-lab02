@@ -2,13 +2,13 @@ package u02
 
 import org.junit.Assert.{assertEquals, assertFalse, assertTrue}
 import org.junit.Test
-import u02.task2.Task2A.{neg, negGeneric, negMeth, parity, parityMeth}
+import u02.exercise.Es3.{parity, parityMeth, neg, negMeth, negGeneric}
 
 /**
  * I will test also the vals, even if it's not properly correct.
  * Vals are more a private thing and usually are tested only the methods.
  */
-class Task2ATest {
+class Es3Test {
   val empty: String => Boolean = _ == ""
   val odd: Int => Boolean = _ % 2 == 0
 

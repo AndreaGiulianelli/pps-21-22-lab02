@@ -1,6 +1,6 @@
-package u02.task2
+package u02.exercise
 
-object Task2B:
+object Es4:
   val p1: Double => Double => Double => Boolean = x => y => z => x <= y && y <= z
   val p2: (Double, Double, Double) => Boolean = (x, y, z) => x <= y && y <= z
   def p3(x: Double)(y: Double)(z: Double) = x <= y && y <= z
