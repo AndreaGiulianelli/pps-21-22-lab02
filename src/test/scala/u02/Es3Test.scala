@@ -10,7 +10,7 @@ import u02.exercise.Es3.{parity, parityMeth, neg, negMeth, negGeneric}
  */
 class Es3Test {
   val empty: String => Boolean = _ == ""
-  val odd: Int => Boolean = _ % 2 == 0
+  val even: Int => Boolean = _ % 2 == 0
 
   @Test def testParityEvenVal(): Unit =
     assertEquals("even", parity(2))
@@ -41,10 +41,10 @@ class Es3Test {
     assertTrue(notEmpty("fog"))
 
   @Test def testGenericNegTrueStatementWithInt(): Unit =
-    assertTrue(negGeneric(odd)(3))
+    assertTrue(negGeneric(even)(3))
 
   @Test def testGenericNegFalseStatementWithInt(): Unit =
-    assertFalse(negGeneric(odd)(2))
+    assertFalse(negGeneric(even)(2))
 
   @Test def testGenericNegTrueStatementWithString(): Unit =
     assertTrue(negGeneric(empty)("fog"))

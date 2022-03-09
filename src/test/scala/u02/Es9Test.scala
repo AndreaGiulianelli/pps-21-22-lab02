@@ -19,5 +19,5 @@ class Es9Test {
     assertFalse(traverse(tree, (x: Boolean, y: Boolean) => x || y, (x) => x == 4))
 
   @Test def testTraverseCount(): Unit =
-    assertEquals(2, traverse(tree, (x: Int, y: Int) => x + y, {case n if n == 2 => 1; case _ => 0}))
+    assertEquals(2, traverse(tree, (x: Int, y: Int) => x + y, {case 2 => 1; case _ => 0}))
 }

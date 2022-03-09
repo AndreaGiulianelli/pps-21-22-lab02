@@ -13,4 +13,4 @@ object Es3:
 
   def negMeth(f: String => Boolean): (String => Boolean) = x => !(f(x))
 
-  def negGeneric[T]: (T => Boolean) => (T => Boolean) = f => x => !(f(x))
+  def negGeneric[T](f: T => Boolean): (T => Boolean) = x => !(f(x))
