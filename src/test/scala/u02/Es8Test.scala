@@ -6,8 +6,11 @@ import u02.exercise.Es8.Option.{Some, None, filter, map, map2}
 
 class Es8Test {
 
-  @Test def testFilter(): Unit =
+  @Test def testFilterTrue(): Unit =
     assertEquals(Some(5), filter(Some(5))(_ > 2))
+
+  @Test def testFilterFalse(): Unit =
+    assertEquals(None(), filter(Some(5))(_ > 10))
 
   @Test def testFilterWithNone(): Unit =
     assertEquals(None(), filter(None[Int]())(_ > 2))
