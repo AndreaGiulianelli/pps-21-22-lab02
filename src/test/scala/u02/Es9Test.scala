@@ -20,4 +20,7 @@ class Es9Test {
 
   @Test def testTraverseCount(): Unit =
     assertEquals(2, traverse(tree, (x: Int, y: Int) => x + y, {case 2 => 1; case _ => 0}))
+
+  @Test def testTraverseCountElementNotPresent(): Unit =
+    assertEquals(0, traverse(tree, (x: Int, y: Int) => x + y, {case 3 => 1; case _ => 0}))
 }
