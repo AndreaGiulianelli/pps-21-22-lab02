@@ -22,11 +22,17 @@ class Es4Test {
     val lessXYZ = lessXY(third)
     assertTrue(lessXYZ)
 
+  @Test def testCurryingSameValue(): Unit =
+    assertTrue(p1(first)(first)(first))
+
   @Test def testCurryingValFalse(): Unit =
     assertFalse(p1(second)(third)(first))
 
   @Test def testNonCurryingValTrue(): Unit =
     assertTrue(p2(first, second, third))
+
+  @Test def testNonCurryingSameValue(): Unit =
+    assertTrue(p2(first, first, first))
 
   @Test def testNonCurryingValFalse(): Unit =
     assertFalse(p2(first, third, second))
@@ -34,11 +40,17 @@ class Es4Test {
   @Test def testCurryingMethTrue(): Unit =
     assertTrue(p3(first)(second)(third))
 
+  @Test def testCurryingMethSameValue(): Unit =
+    assertTrue(p3(first)(first)(first))
+
   @Test def testCurryingMethFalse(): Unit =
     assertFalse(p3(third)(second)(first))
 
   @Test def testNonCurryingMethTrue(): Unit =
     assertTrue(p4(first, second, second))
+
+  @Test def testNonCurryingMethSameValue(): Unit =
+    assertTrue(p4(first, first, first))
 
   @Test def testNonCurryingMethFalse(): Unit =
     assertFalse(p4(first, third, second))
