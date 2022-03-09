@@ -6,4 +6,5 @@ out/
 .scalafmt.conf
 .bsp
 .project/*
-target/
+target/*
+project/*
