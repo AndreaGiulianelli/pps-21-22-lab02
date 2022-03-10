@@ -29,4 +29,4 @@ object Es8:
     // f return an Option in order to permit to return None() to a composition
     def map2[A, B, C >: A, D >: B, E](opt1: Option[A])(opt2: Option[B])(f: (C, D) => Option[E]): Option[E] = (opt1, opt2) match
       case (Some(value1), Some(value2)) => f(value1, value2)
-      case (None(), _) | (_, None()) => None()
+      case _ => None()
